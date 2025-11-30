@@ -1,7 +1,12 @@
+import os
+
 from motor.motor_asyncio import AsyncIOMotorClient
 
-MONGO_URL = "mongodb+srv://admin_db_user:IEB4xLTkxLMb4MEc@quizmaster.pidhin3.mongodb.net/"
-DB_NAME = "eduquest"
+MONGO_URL = os.getenv("MONGO_URL")
+DB_NAME = os.getenv("DB_NAME", "eduquest")
+
+if not MONGO_URL:
+    raise RuntimeError("MONGO_URL no esta definida en las variables de entorno")
 
 client = AsyncIOMotorClient(MONGO_URL)
 db = client[DB_NAME]

@@ -21,7 +21,7 @@ try:
 except Exception:  # pragma: no cover - dependencia opcional
     genai = None
 
-GEMINI_API_KEY = os.getenv("AIzaSyBVe_ueEE5tfqYlcgQSFRzKT7i9Qmx_PVQ")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 if genai and GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
 
