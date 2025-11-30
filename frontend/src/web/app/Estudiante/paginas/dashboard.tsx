@@ -20,7 +20,7 @@ export default function EstudianteDashboard() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // 🧠 URL del backend según entorno
+  //url de la API
   const API_BASE = (import.meta.env.VITE_API_URL || "http://127.0.0.1:8000").replace(/\/+$/, "");
   const API_URL = `${API_BASE}/api/estudiantes/dashboard`;
 
@@ -56,7 +56,7 @@ export default function EstudianteDashboard() {
       </div>
     );
 
-  // ✅ Datos de ejemplo si aún no hay backend conectado
+  // Datos para probar
   const dashboard = data || {
     promedioGeneral: 8.5,
     cambioPromedio: 0.5,
@@ -102,7 +102,7 @@ export default function EstudianteDashboard() {
   return (
     <main className="flex-1 px-4 sm:px-10 lg:px-20 py-8">
       <div className="flex flex-col max-w-[1200px] mx-auto w-full">
-        {/* 👋 Encabezado */}
+        {/* Encabezado */}
         <div className="flex justify-between gap-3 p-4">
           <div className="flex flex-col gap-2">
             <p className="text-gray-900 text-4xl font-black leading-tight">
@@ -114,7 +114,7 @@ export default function EstudianteDashboard() {
           </div>
         </div>
 
-        {/* 📊 Estadísticas principales */}
+        {/* Estadísticas principales */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
           <StatCard
             titulo="Promedio General"
@@ -152,7 +152,7 @@ export default function EstudianteDashboard() {
   );
 }
 
-/* 📘 COMPONENTES REUTILIZABLES */
+/* COMPONENTES REUTILIZABLES */
 
 function StatCard({ titulo, valor, cambio }: any) {
   return (

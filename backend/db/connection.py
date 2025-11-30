@@ -11,7 +11,7 @@ if not MONGO_URL:
 client = AsyncIOMotorClient(MONGO_URL)
 db = client[DB_NAME]
 
-# Colecciones principales (expuestas a las rutas genericas)
+# Colecciones principales de la DB
 quizzes_collection = db.quizzes
 preguntas_collection = db.preguntas
 results_collection = db.results

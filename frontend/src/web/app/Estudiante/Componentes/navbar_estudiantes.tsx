@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <header className="flex items-center justify-between border-b border-gray-200 dark:border-gray-700 px-6 sm:px-10 lg:px-20 py-3 bg-white dark:bg-gray-800/50 sticky top-0 z-10 backdrop-blur-sm">
-      {/* 🧠 Logo + Buscador */}
+
       <div className="flex items-center gap-8">
         {/* Logo */}
         <div className="flex items-center gap-3 text-gray-900 dark:text-white">
@@ -29,7 +29,7 @@ export default function Header() {
           </h2>
         </div>
 
-        {/* 🔍 Buscador */}
+        {/* Buscador */}
         <label className="hidden md:flex flex-col min-w-40 h-10 max-w-64">
           <div className="flex w-full items-stretch rounded-lg h-full">
             <div className="text-gray-500 dark:text-gray-400 flex items-center justify-center pl-4 rounded-l-lg bg-gray-100 dark:bg-gray-700">
@@ -45,7 +45,7 @@ export default function Header() {
         </label>
       </div>
 
-      {/* 🔔 Botones de acción */}
+      {/* Botones de acción */}
       <div className="flex items-center justify-end gap-2 sm:gap-4">
         {/* Notificaciones */}
         <button className="flex items-center justify-center rounded-lg h-10 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2.5 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
