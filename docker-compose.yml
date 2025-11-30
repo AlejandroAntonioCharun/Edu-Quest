@@ -1,0 +1,20 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    env_file:
+      - ./backend/.env
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: ${FRONTEND_VITE_API_URL:-https://backend-wheat-eta-45.vercel.app/}
+    ports:
+      - "4173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
